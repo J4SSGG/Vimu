@@ -1,11 +1,15 @@
-import { createRoot } from 'react-dom/client'
+import { ConfigProvider, theme } from "antd";
 import { Vimu } from './threejs/Vimu.jsx'
-
+import { VimuLayout } from './ui/Layout.jsx'
 function App() {
     return (
-        <div id="canvas-container">
-            <Vimu />
-        </div>
+        <ConfigProvider theme={{
+            algorithm: theme.darkAlgorithm
+        }}>
+            <VimuLayout>
+                <Vimu />
+            </VimuLayout>
+        </ConfigProvider>
     )
 }
 
