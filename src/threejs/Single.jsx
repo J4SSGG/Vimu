@@ -13,9 +13,9 @@ export const Single = (props) => {
 
     return (
         <group>
-            <mesh position={pos} ref={ref} onClick={handleClick}>
+            <mesh position={pos} ref={ref} onClick={handleClick} renderOrder={3}>
                 <circleGeometry args={[0.4]}/>
-                <meshNormalMaterial flatShading={true}/>
+                <meshNormalMaterial flatShading={true} depthTest={false}/>
             </mesh>
             <Text fontSize={0.2} color="white" position={pos}>
                 {note}

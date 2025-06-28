@@ -27,13 +27,13 @@ export const NotesPlane = () => {
         <group ref={groupMesh}>
             {notesPlane?.map((p, j) => {
                 return p.map((n, i) =>  {
-                    const f = 1.3
-                    const x = (-(p.length + j) / 2 + (i + j) ) * f
-                    const y = (notesPlane.length / 2) - j * f
+                    const f = 1.5
+                    const x = (i + j / 2)  * f
+                    const y =  - j * f
                     const z = 0
-                    const singlePos = [ x, y, z+0.001]
+                    const singlePos = [ x, y, z]
                     const trianglePos = [ x + f / 2, y - f / 3, z]
-                    const trianglePos2 = [ x + f / 2, y + f / 4, z]
+                    const trianglePos2 = [ x + f / 2, y + f / 3.5, z]
                     return <>
                         <Single key={ "s-" + i } note={n} pos={singlePos} playNotesFn={playNotes}/>
                         { i < p.length -1 && j < notesPlane.length -1 && (<Triangle key={ "t-" + i } note={[notesPlane[j][i], notesPlane[j][i+1], notesPlane[j+1][i]]} pos={trianglePos} playNotesFn={playNotes}/>) }

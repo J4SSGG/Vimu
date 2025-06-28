@@ -13,9 +13,9 @@ export const Triangle2 = (props) => {
 
     return (
         <group>
-            <mesh position={pos} ref={ref} onClick={handleClick}>
-                <circleGeometry args={[1, 3, Math.PI / 2]}/>
-                <meshBasicMaterial color={"green"}/>
+            <mesh position={pos} ref={ref} onClick={handleClick} renderOrder={1}>
+                <circleGeometry args={[0.9, 3, Math.PI / 2]}/>
+                <meshBasicMaterial color={"green"} depthTest={false}/>
             </mesh>
         </group>
     )
