@@ -7,8 +7,9 @@ export const Triangle2 = (props) => {
 
     const {note, pos, playNotesFn} = props
 
-    const handleClick = (e) => {
-        playNotesFn(note, e);
+    const handleClick = (event) => {
+        event.stopPropagation();
+        playNotesFn(note, event);
     }
 
     return (

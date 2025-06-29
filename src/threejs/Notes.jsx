@@ -4,7 +4,7 @@ import { Single } from "./Single.jsx";
 import { Triangle } from "./Triangle.jsx";
 import { Triangle2 } from "./Triangle2.jsx";
 
-export const NotesPlane = () => {
+export const Notes = () => {
     const groupMesh = React.useRef()
 
     const notesPlane =
